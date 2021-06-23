@@ -141,10 +141,10 @@ void render_logo(void) {
 }
 
 void oled_render_wpm(void) { 
-    char wpm[4];
-    sprintf(wpm, "%03d", get_current_wpm());
+    char wpm[10];
+    sprintf(wpm, "WPM: %03d", get_current_wpm());
 
-    oled_write_P(PSTR("\n\nWPM: "), false);
+    oled_write_P(PSTR("\n"), false);
     oled_write(wpm, false);
 }
 
